@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText _main_et_username,_main_et_password;
     Button _main_btn_submit;
-    TextView _main_tv_forgotPassword;
+    TextView _main_tv_forgotPassword,_main_tv_newUser;
     String username,password;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         _main_et_password = findViewById(R.id.main_et_password);
         _main_btn_submit = findViewById(R.id.main_btn_submit);
         _main_tv_forgotPassword = findViewById(R.id.main_tv_forgotPassword);
+        _main_tv_newUser = findViewById(R.id.main_tv_newUser);
 
         _main_btn_submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,5 +65,8 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+    public void redirectToRegistration(View iew){
+        Intent i = new Intent(MainActivity.this,Registration.class);
     }
 }

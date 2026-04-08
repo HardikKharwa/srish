@@ -55,6 +55,19 @@
         android:text="Forgot Password"
         android:textColor="@android:color/holo_blue_dark"
         />
+    <TextView
+        android:id="@+id/main_tv_newUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New User? Regiter Here"
+        android:textSize="15dp"
+        android:textAlignment="center"
+        android:padding="5dp"
+        android:layout_margin="10dp"
+        android:textStyle="bold|italic"
+        android:onClick="redirectToRegistration"
+
+        />
 
 
 </LinearLayout>
