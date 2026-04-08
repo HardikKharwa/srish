@@ -9,7 +9,7 @@
         android:title="About Us" />
     <item
         android:id="@+id/menu_contactUs"
-        android:title="Contact us" />
+        android:title="Contact Us" />
     <item
         android:id="@+id/menu_profile"
         android:title="Profile" />
