@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
                     _main_et_password.setError("Password cannot be less then 8 characters");
                 } else {
                     if (username.equals("admin") && password.equals("admin@1234")) {
-                        SharedPreferences.Editor editor = SharedPreferences.edit();
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
                         editor.putString("username", username);
                         editor.putString("isLoggedIn", "1");
                         editor.commit();

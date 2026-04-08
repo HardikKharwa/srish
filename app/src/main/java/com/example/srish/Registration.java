@@ -75,7 +75,7 @@ public class Registration extends AppCompatActivity {
             }
         });
     }
-    public void registerData(View view) {
+    public void registerData(View view){
         username = _registration_et_username.getText().toString().trim();
         password = _registration_et_password.getText().toString().trim();
         email = _registration_et_email.getText().toString().trim();
@@ -83,6 +83,7 @@ public class Registration extends AppCompatActivity {
         int selectedId = _registration_radioGroup_Gender.getCheckedRadioButtonId();
         String status = _registration_spinner_status.getSelectedItem().toString().trim();
         boolean tnc = _registration_checkbox_tnc.isChecked();
+
         if (username.isEmpty()) {
             _registration_etl_username.setError("username cannot be empty");
             _registration_etl_username.requestFocus();
@@ -129,13 +130,13 @@ public class Registration extends AppCompatActivity {
         } else if (selectedId == _registration_rb_female.getId()) {
         } else {
             _registration_tv_data.setText("Please select Gender");
-            _registration_tv_data.setTextColor(getResources.getColor(R.color.red));
+            _registration_tv_data.setTextColor(getResources().getColor(R.color.red));
             _registration_tv_data.setTextSize(25);
             return;
         }
         if (status.isEmpty()) {
             _registration_tv_data.setText("Please select Status");
-            _registration_tv_data.setTextColor(getResources.getColor(R.color.red));
+            _registration_tv_data.setTextColor(getResources().getColor(R.color.red));
             _registration_tv_data.setTextSize(25);
             return;
         }
@@ -153,7 +154,7 @@ public class Registration extends AppCompatActivity {
         data += "Terms and Conditions: " + (tnc ? "Accepted" : "Not Accepted") + "\n";
 
         _registration_tv_data.setText(data);
-        _registration_tv_data.setTextColor(getResources.getColor(R.color.black));
+        _registration_tv_data.setTextColor(getResources().getColor(R.color.black));
         _registration_tv_data.setTextSize(16);
         _registration_tv_data.setVisibility(VISIBLE);
 

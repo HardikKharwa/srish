@@ -63,31 +63,24 @@ public class SecondActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.home_menu,menu);
+        getMenuInflater().inflate(R.menu.home_menu, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int item_id = item.getItemId();
-        if(item_id == R.id.menu_home) {
-        }
-        else if(item_id == R.id.menu_about){
+        if (item_id == R.id.menu_home) {
+        } else if (item_id == R.id.menu_aboutUs) {
 
-        }
-        else if(item_id == R.id.menu_contactUs){
+        } else if (item_id == R.id.menu_contactUs) {
 
-        }
-        else if(item_id == R.id.menu_profile){
+        } else if (item_id == R.id.menu_profile) {
 
-        }
-        else if(item_id == R.id.menu_settings){
+        } else if (item_id == R.id.menu_settings) {
 
-        }
-        else if(item_id == R.id.menu_logout){
+        } else if (item_id == R.id.menu_logout) {
 
-        }
-        else{
         }
         return true;
     }
