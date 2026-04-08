@@ -17,12 +17,13 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-    EditText _main_et_username,_main_et_password;
+    EditText _main_et_username, _main_et_password;
     Button _main_btn_submit;
-    TextView _main_tv_forgotPassword,_main_tv_newUser;
-    String username,password;
+    TextView _main_tv_forgotPassword, _main_tv_newUser;
+    String username, password;
     public static final String myPreference = "myPrefs";
     SharedPreferences sharedPreferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,32 +41,37 @@ public class MainActivity extends AppCompatActivity {
         _main_tv_newUser = findViewById(R.id.main_tv_newUser);
 
         sharedPreferences = getSharedPreferences(myPreference, Context.MODE_PRIVATE);
+        if (sharedPreferences.getAll().containsKey("isLoggedIn")) {
+            if (sharedPreferences.getAll().containsKey("username")) {
+               Intent i = new Intent(MainActivity.this,SecondActivity.class);
+               startActivity(i);
+               finish();
+            }
+
+        }
 
         _main_btn_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 username = _main_et_username.getText().toString().trim();
                 password = _main_et_password.getText().toString().trim();
-                if(username.isEmpty()){
+                if (username.isEmpty()) {
                     _main_et_username.setError("Enter Username");
-                }
-                else if(password.isEmpty()){
+                } else if (password.isEmpty()) {
                     _main_et_password.setError("Enter Password");
 
-                } else if (password.length()<=8) {
+                } else if (password.length() <= 8) {
                     _main_et_password.setError("Password cannot be less then 8 characters");
-                }
-                else{
-                    if(username.equals("admin") && password.equals("admin@1234")){
+                } else {
+                    if (username.equals("admin") && password.equals("admin@1234")) {
                         SharedPreferences.Editor editor = SharedPreferences.edit();
                         editor.putString("username", username);
-                        editor.putString("isLoggedIn","1");
+                        editor.putString("isLoggedIn", "1");
                         editor.commit();
-                        Intent i = new Intent(MainActivity.this,SecondActivity.class);
+                        Intent i = new Intent(MainActivity.this, SecondActivity.class);
                         startActivity(i);
                         finish();
-                    }
-                    else{
+                    } else {
                         Toast.makeText(MainActivity.this, "Invalid Credenmtials,Try Agian!", Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -73,7 +79,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    public void redirectToRegistration(View iew){
-        Intent i = new Intent(MainActivity.this,Registration.class);
+
+    public void redirectToRegistration(View iew) {
+        Intent i = new Intent(MainActivity.this, Registration.class);
     }
 }
