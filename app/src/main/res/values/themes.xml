@@ -1,9 +1,14 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.Srish" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.Srish" parent="Theme.AppCompat.DayNight.DarkActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+         <item name="colorPrimary">@android:color/holo_green_light</item>
+    </style>
+    <style name="Theme.Srish" parent="Base.Theme.Srish" />
+
+
+    <style name="fullScreen" parent="Theme.Material3.DayNight.NoActionBar">
+    <item name="android:windowFullscreen">true</item>
     </style>
 
-    <style name="Theme.Srish" parent="Base.Theme.Srish" />
 </resources>

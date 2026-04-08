@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -40,15 +41,17 @@ public class SecondActivity extends AppCompatActivity {
         } else {
             logout();
         }
-
-
     }
-    public void logout(){
+    public void btnLogout(View view){
+        logout();
+    }
+
+    public void logout() {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.clear();
         editor.commit();
         finish();
-        Intent i = new Intent(SecondActivity.this,MainActivity.class);
+        Intent i = new Intent(SecondActivity.this, MainActivity.class);
         startActivity(i);
         finish();
 
