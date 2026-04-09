@@ -1,9 +1,11 @@
 package com.example.srish;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Message;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -43,9 +46,9 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences = getSharedPreferences(myPreference, Context.MODE_PRIVATE);
         if (sharedPreferences.getAll().containsKey("isLoggedIn")) {
             if (sharedPreferences.getAll().containsKey("username")) {
-               Intent i = new Intent(MainActivity.this,SecondActivity.class);
-               startActivity(i);
-               finish();
+                Intent i = new Intent(MainActivity.this, SecondActivity.class);
+                startActivity(i);
+                finish();
             }
 
         }
@@ -57,6 +60,20 @@ public class MainActivity extends AppCompatActivity {
                 password = _main_et_password.getText().toString().trim();
                 if (username.isEmpty()) {
                     _main_et_username.setError("Enter Username");
+                    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                    builder.setTitle("Error");
+                    builder.setMessage("Please Enter Username");
+                    builder.setCancelable(false);
+                    builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+
+                        }
+                    });
+                    builder.setNegativeButton("Cancel", null);
+                    builder.setNeutralButton("Natural", null);
+                    builder.setIcon(R.drawable.error_icon);
+                    builder.show();
                 } else if (password.isEmpty()) {
                     _main_et_password.setError("Enter Password");
 
@@ -72,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(i);
                         finish();
                     } else {
-                        Toast.makeText(MainActivity.this, "Invalid Credenmtials,Try Agian!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Invalid Credentials,Try Again!", Toast.LENGTH_SHORT).show();
                     }
                 }
 
