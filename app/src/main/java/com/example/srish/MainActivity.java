@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Message;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -76,6 +77,9 @@ public class MainActivity extends AppCompatActivity {
                     builder.show();
                 } else if (password.isEmpty()) {
                     _main_et_password.setError("Enter Password");
+                    AlertDialog.Builder alertBuilder = new AlertDialog.Builder(MainActivity.this);
+                    LayoutInflater inflater = getLayoutInflater();
+
 
                 } else if (password.length() <= 8) {
                     _main_et_password.setError("Password cannot be less then 8 characters");
