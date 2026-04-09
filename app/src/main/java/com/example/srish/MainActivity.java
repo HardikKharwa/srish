@@ -79,6 +79,21 @@ public class MainActivity extends AppCompatActivity {
                     _main_et_password.setError("Enter Password");
                     AlertDialog.Builder alertBuilder = new AlertDialog.Builder(MainActivity.this);
                     LayoutInflater inflater = getLayoutInflater();
+                    View view_error = inflater.inflate(R.layout.error_layout, null);
+                    alertBuilder.setView(view_error);
+                    TextView _error_tv_title = view_error.findViewById(R.id.erro_tv_title);
+                    TextView _error_tv_message = view_error.findViewById(R.id.error_tv_message);
+                    Button _error_btn_close = view_error.findViewById(R.id.erro_btn_close);
+                    alertBuilder.setCancelable(false);
+                    final AlertDialog dialog = alertBuilder.create();
+                    _error_tv_title.setText("Password Error");
+                    _error_tv_message.setText("Password Cannot be Empty");
+                    _error_btn_close.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            dialog.dismiss();
+                        }
+                    });
 
 
                 } else if (password.length() <= 8) {
