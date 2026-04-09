@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
     String username, password;
     public static final String myPreference = "myPrefs";
     SharedPreferences sharedPreferences;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,9 +50,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
                 finish();
             }
-
         }
-
         _main_btn_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,7 +65,6 @@ public class MainActivity extends AppCompatActivity {
                     builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-
                         }
                     });
                     builder.setNegativeButton("Cancel", null);
@@ -94,8 +90,6 @@ public class MainActivity extends AppCompatActivity {
                             dialog.dismiss();
                         }
                     });
-
-
                 } else if (password.length() <= 8) {
                     _main_et_password.setError("Password cannot be less then 8 characters");
                 } else {
