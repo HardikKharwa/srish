@@ -74,7 +74,7 @@ public class SecondActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int item_id = item.getItemId();
         if (item_id == R.id.menu_home) {
-        } else if (item_id == R.id.menu_aboutUs) {
+        } else if (item_id == R.id.menu_aboutus) {
 
         } else if (item_id == R.id.menu_contactUs) {
 

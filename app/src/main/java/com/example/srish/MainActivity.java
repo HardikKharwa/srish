@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         });
         _main_et_username = findViewById(R.id.main_et_username);
         _main_et_password = findViewById(R.id.main_et_password);
-        _main_btn_login = findViewById(R.id.main_btn_login);
+        _main_btn_login = findViewById(R.id.main_btn_submit);
         _main_tv_forgotPassword = findViewById(R.id.main_tv_forgotPassword);
         _main_tv_newUser = findViewById(R.id.main_tv_newUser);
 
