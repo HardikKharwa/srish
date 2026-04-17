@@ -1,16 +1,31 @@
 <resources>
-<string name="app_name">srish</string>
-<string name="enterUsername">Enter Username</string>
-<string name="enterPassword">Enter Password</string>
-<string name="enterEmail">Enter Email</string>
-<string name="enterContact">Enter Contact</string>
-<string name="tnc">I agree to the Terms and Conditions</string>
-<string name="forgotPassword">Forgot Password</string>
-<string name="languageSelection">Please Select Language</string>
-<string name="logout">Logout</string>
+    <string name="app_name">srish</string>
+    <string name="enterUsername">Enter Username</string>
+    <string name="enterPassword">Enter Password</string>
+    <string name="enterEmail">Enter Email</string>
+    <string name="enterContact">Enter Contact</string>
+    <string name="tnc">I agree to the Terms and Conditions</string>
+    <string name="forgotPassword">Forgot Password</string>
+    <string name="languageSelection">Please Select Language</string>
+    <string name="logout">Logout</string>
 
-<array name="status_array">
-    <item>Active</item>
-    <item>Inactive</item>
-</array>
+    <array name="status_array">
+        <item>Active</item>
+        <item>Inactive</item>
+    </array>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="submit">Submit</string>
+    <string name="male">Male</string>
+    <string name="female">female</string>
+    <string name="menu">Menu</string>
+    <string name="settings">Settings</string>
+    <string name="profile">profile</string>
+    <string name="contactus">contactUs</string>
+    <string name="aboutus">aboutus</string>
+    <string name="home">home</string>
+
 </resources>

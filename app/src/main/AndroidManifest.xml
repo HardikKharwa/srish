@@ -10,25 +10,43 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Srish">
+        android:theme="@style/Base.Theme.Srish">
         <activity
-            android:name=".SecondActivity"
+            android:name=".change_password"
             android:exported="true"
-            android:label="Home" />
+            android:label="Change Password"
+            android:theme="@style/Base.Theme.Srish"
+            />
+        <activity
+            android:name=".profile"
+            android:exported="true"
+            android:label="Profile"
+            android:theme="@style/Base.Theme.Srish" />
+        <activity
+            android:name=".newRegistration"
+            android:exported="true"
+            android:theme="@style/fullScreen" />
+        <activity
+            android:name=".newLogin"
+            android:exported="true"
+            android:theme="@style/fullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".Registration"
             android:exported="true"
             android:theme="@style/fullScreen" />
         <activity
+            android:name=".SecondActivity"
+            android:exported="true"
+            android:label="Home" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/fullScreen">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/fullScreen" />
     </application>
 
 </manifest>

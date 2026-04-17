@@ -5,16 +5,17 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Registration">
+    android:theme="@style/Base.Theme.Srish"
+    tools:context=".newRegistration">
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/registration_etl_username"
+        android:id="@+id/newregistration_etl_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:errorEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/registration_et_username"
+            android:id="@+id/newregistration_et_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/enterUsername"
@@ -22,15 +23,15 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/registration_etl_password"
+        android:id="@+id/newregistration_etl_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/registration_etl_username"
+        android:layout_below="@id/newregistration_etl_username"
         app:errorEnabled="true"
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/registration_et_password"
+            android:id="@+id/newregistration_et_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/enterPassword"
@@ -38,14 +39,14 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/registration_etl_email"
+        android:id="@+id/newregistration_etl_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/registration_etl_password"
+        android:layout_below="@id/newregistration_etl_password"
         app:errorEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/registration_et_email"
+            android:id="@+id/newregistration_et_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/enterEmail"
@@ -53,16 +54,16 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/registration_etl_contact"
+        android:id="@+id/newregistration_etl_contact"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/registration_etl_email"
+        android:layout_below="@id/newregistration_etl_email"
         app:counterEnabled="true"
         app:counterMaxLength="10"
         app:errorEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/registration_et_contact"
+            android:id="@+id/newregistration_et_contact"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/enterContact"
@@ -70,58 +71,21 @@
             android:maxLength="10" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <RadioGroup
-        android:id="@+id/registration_radioGroup_Gender"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/registration_etl_contact"
-        android:layout_margin="10dp"
-        android:orientation="horizontal">
-
-        <RadioButton
-            android:id="@+id/registration_rb_male"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/male" />
-
-        <RadioButton
-            android:id="@+id/registration_rb_female"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/female" />
-    </RadioGroup>
-
-    <Spinner
-        android:id="@+id/registration_spinner_status"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/registration_radioGroup_Gender"
-        android:layout_margin="10dp"
-        android:entries="@array/status_array" />
-
-    <CheckBox
-        android:id="@+id/registration_checkbox_tnc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/registration_spinner_status"
-        android:layout_margin="10dp"
-        android:text="@string/tnc" />
-
     <Button
-        android:id="@+id/registration_btn_submit"
+        android:id="@+id/newregistration_btn_submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/registration_checkbox_tnc"
+        android:layout_below="@id/newregistration_etl_contact"
         android:layout_centerInParent="true"
-        android:enabled="false"
-        android:onClick="registerData"
+        android:onClick="NewregisterData"
         android:text="@string/submit" />
 
     <TextView
-        android:id="@+id/registration_tv_data"
+        android:id="@+id/newregistration_tv_data"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/registration_btn_submit"
+        android:layout_below="@id/newregistration_btn_submit"
         android:layout_margin="10dp"
         android:padding="10dp" />
+
 </RelativeLayout>
