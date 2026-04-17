@@ -33,7 +33,7 @@ public class SecondActivity extends AppCompatActivity {
         });
         if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle("Home | From Code");
-            getSupportActionBar().setIcon(R.drawable.setting_icon);
+            getSupportActionBar().setIcon(R.drawable.settings_icon);
         }
         sharedPreferences = getSharedPreferences(myPreferences, Context.MODE_PRIVATE);
         if (sharedPreferences.getAll().containsKey("isLoggedIn")) {
